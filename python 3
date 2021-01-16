@@ -1,0 +1,27 @@
+#Strange Matrix python solution.
+
+class Solution:
+    def get(self, i, j):
+      return a.get(i,j)
+    def solve(self, R, C):
+        answer=0
+        last=C
+        for i in range(R):
+            while last>0 and self.get(i,last-1)==1:
+                answer=i
+                last-=1
+        return answer;
+ 
+ 
+ 
+ 
+ wave array python solution.
+ 
+ class Solution:
+    def convertToWave(self, arr, N):
+        i=0
+        while(i<N-1):
+            temp = arr[i]
+            arr[i] = arr[i+1]
+            arr[i+1] = temp
+            i+=2
